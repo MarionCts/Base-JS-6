@@ -198,4 +198,55 @@ console.log(agesAdultes);
 
 // EXO 14-15
 
+const etudiantes = [
+    {
+        nom: "Eleanor",
+        note: 12
+    },
+    {
+        nom: "Kady",
+        note: 18
+    },
+    {
+        nom: "Marc",
+        note: 15
+    },
+    {
+        nom: "Laurent",
+        note: 16
+    }
+];
 
+function trouverMeilleurEtudiant(tableau) {
+
+    let meilleurEtudiant = tableau[0];
+
+    for (objet of tableau) {
+        if (objet.note > meilleurEtudiant.note) {
+            meilleurEtudiant = objet;
+        }
+    }
+    return meilleurEtudiant.nom;
+}
+
+console.log(`${trouverMeilleurEtudiant(etudiantes)}`);
+
+// EXO 16
+
+const mots = ["chat", "elephant", "oiseau"];
+
+console.log(mots[0].length);
+
+function motLePlusLong(tableau) {
+
+    let lePlusLong = tableau[0];
+
+    for (motLong of tableau) {
+        if (motLong.length > lePlusLong.length) {
+            lePlusLong = motLong;
+        }
+    }
+    return lePlusLong;
+}
+
+console.log(`${motLePlusLong(mots)}`);
